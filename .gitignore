@@ -1,0 +1,9 @@
+cache/
+pkg/
+tmp-build/
+tmp-dest/
+packages/
+!.gitkeep
+
+vendor
+.vagrant

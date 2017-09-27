@@ -1,0 +1,16 @@
+---
+language: ruby
+rvm:
+  - "2.2"
+
+script:
+  - echo hi
+
+notifications:
+  slack:
+    on_pull_requests: false
+    on_success: never
+    on_change: never
+  email:
+    on_success: never
+    on_failure: never

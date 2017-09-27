@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# log: generic logging function
+#   ...args: arguments to log to standard output
+function log() {
+  echo $@
+}
+
+function configure() {
+  local new_version="$1"
+
+  /etc/profile.d/script.sh
+  cat /etc/motd
+
+  return 0
+}
+
+function main() {
+  local action="$1"
+  shift
+
+  case $action in
+    1|2)
+      configure $@
+      ;;
+    *)
+      ;;
+  esac
+}
+
+main $@

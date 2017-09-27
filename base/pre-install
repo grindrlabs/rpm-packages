@@ -1,0 +1,38 @@
+#!/bin/bash
+
+function pkg_install() {
+  local old_version="$1"
+  return 0
+}
+
+function abort_upgrade() {
+  local new_version="$1"
+  return 0
+}
+
+function upgrade() {
+  local old_version="$1"
+  return 0
+}
+
+function main() {
+  local action="$1"
+  shift
+
+  case $action in
+    1)
+      # avoid aliasing built-ins
+      pkg_install $@
+      ;;
+    2)
+      upgrade $@
+      ;;
+    abort_upgrade)
+      abort_upgrade $@
+      ;;
+    *)
+      ;;
+  esac
+}
+
+main $@

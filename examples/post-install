@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+function configure() {
+  local new_version="$1"
+  return 0
+}
+
+function main() {
+  local action="$1"
+  shift
+
+  case $action in
+    1|2)
+      configure $@
+      ;;
+    *)
+      ;;
+  esac
+}
+
+main $@

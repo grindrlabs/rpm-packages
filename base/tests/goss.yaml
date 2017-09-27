@@ -1,0 +1,19 @@
+file:
+  /etc/motd:
+    exists: true
+    mode: "0755"
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /company/bin:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+package:
+  base:
+    installed: true

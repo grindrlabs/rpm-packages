@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+function remove() {
+  return 0
+}
+
+function upgrade() {
+  local new_version="$1"
+  return 0
+}
+
+function main() {
+  local action="$1"
+  shift
+
+  case $action in
+    0)
+      remove
+      ;;
+    1)
+      upgrade $@
+      ;;
+    *)
+      ;;
+  esac
+}
+
+main $@
